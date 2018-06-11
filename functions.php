@@ -102,6 +102,14 @@ function massively_wp_remove_img_attr( $html ) {
 }
 add_filter( 'post_thumbnail_html', 'massively_wp_remove_img_attr' );
 
+/*
+ * Add div element in comment form
+ * 
+*/
+add_action( 'comment_form_top', function() {
+	echo '<div class="row uniform">';
+} );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
