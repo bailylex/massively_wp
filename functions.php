@@ -69,6 +69,11 @@ if ( ! function_exists( 'massively_wp_setup' ) ) :
 				echo 'class="fade-in"';
 			}
 		}
+
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'massively_wp_custom_background_args', array(
+			'default-color'      => '1e252d'
+		) ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'massively_wp_setup' );

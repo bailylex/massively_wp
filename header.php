@@ -17,6 +17,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<noscript><link rel="stylesheet" href="<?php //wp_enqueue_style('noscript', get_template_directory_uri() . '/assets/css/noscript.css'); ?>"></noscript>
+	<style type="text/css">
+		#wrapper > .bg { 
+			background-image: url("<?php echo get_template_directory_uri() . '/images/assets/overlay.jpg' ?>"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("<?php echo get_theme_mod( 'massively_wp_background' ); ?>");
+		}
+	</style>
 
 	<?php wp_head(); ?>
 </head>

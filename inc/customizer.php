@@ -60,6 +60,16 @@ function massively_wp_customize_register( $wp_customize ) {
 		'section' => 'intro',
 		'label' => __( 'Description' ),
 	) );
+
+	/*
+	 * Background image customizer
+	 */
+	$wp_customize->add_setting( 'massively_wp_background' );
+	$wp_customize->add_control( new WP_Customize_image_control( $wp_customize, 'massively_wp_background', array(
+		'label'    => 'Upload Background Image',
+		'section'  => 'background_image',
+		'settings' => 'massively_wp_background'
+	) ) );
 }
 add_action( 'customize_register', 'massively_wp_customize_register' );
 
