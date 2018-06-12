@@ -60,11 +60,6 @@ if ( ! function_exists( 'massively_wp_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'massively_wp_custom_background_args', array(
-			'default-color' => '1e252d',
-		) ) );
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -146,6 +141,11 @@ function massively_wp_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'massively_wp_scripts' );
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
