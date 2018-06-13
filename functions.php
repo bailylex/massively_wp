@@ -131,6 +131,7 @@ add_action( 'after_setup_theme', 'massively_wp_content_width', 0 );
 function massively_wp_scripts() {
 	// Styles
 	wp_enqueue_style( 'massively-wp-style', get_stylesheet_uri() );
+	wp_style_add_data( 'massively-wp-style', 'rtl', 'replce' );
 	wp_enqueue_style( 'massively-wp-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', false, '4.6', 'all' );
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900' );
 

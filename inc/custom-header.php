@@ -14,9 +14,9 @@
  */
 function Massively_WP_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'Massively_WP_custom_header_args', array(
-		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
-		'wp-head-callback'       => 'Massively_WP_header_style',
+		'uploads' => true,
+		'wp-head-callback'       => 'Massively_WP_header_style'
 	) ) );
 }
 add_action( 'after_setup_theme', 'Massively_WP_custom_header_setup' );
