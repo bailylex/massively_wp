@@ -19,8 +19,8 @@
 		<div id="copyright">
 			<ul>
 				<li>&copy; <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a></li>
-				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-				<li>WordPress: <a href="">Alex Fedorov</a></li>
+				<li>Design: <a href="<?php echo esc_url( __( 'https://html5up.net', 'massively-wp' ) ); ?>"><?php printf( __( 'HTML5 UP', 'massively-wp' ) ); ?></a></li>
+				<li>WordPress: <a href="<?php echo esc_url( __( 'https://bailylex.github.io/portfolio/', 'massively-wp' ) ); ?>"><?php printf( __( 'Alex Fedorov', 'massively-wp' ) ); ?></a></li>
 			</ul>
 		</div>
 

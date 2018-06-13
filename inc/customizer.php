@@ -36,41 +36,45 @@ function massively_wp_customize_register( $wp_customize ) {
 	 * Appear only on homepage as a page hero
 	 */
 	$wp_customize->add_section( 'intro', array(
-		'title' => __( 'Intro', 'massively-wp' ),
-		'description' => 'Fill intro for your Massively WP main page',
-		'priority' => 25,
-		'capability' => 'edit_theme_options',
+		'title'           => __( 'Intro', 'massively-wp' ),
+		'description'     => 'Fill intro for your Massively WP main page',
+		'priority'        => 25,
+		'capability'      => 'edit_theme_options',
 		'active_callback' => 'is_home'
 	) );
 
 	// Title
 	$wp_customize->add_setting( 'intro_title', array(
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options'
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'wp_filter_nohtml_kses'
 	) );
 	$wp_customize->add_control( 'intro_title', array(
-		'type' => 'text',
+		'type'     => 'text',
 		'priority' => 10,
-		'section' => 'intro',
-		'label' => __( 'Title' ),
+		'section'  => 'intro',
+		'label'    => 'Title',
 	) );
 
 	// Description
 	$wp_customize->add_setting( 'intro_description', array(
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options'
+		'type'       => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'wp_filter_nohtml_kses'
 	) );
 	$wp_customize->add_control( 'intro_description', array(
-		'type' => 'textarea',
+		'type'     => 'textarea',
 		'priority' => 20,
-		'section' => 'intro',
-		'label' => __( 'Description' ),
+		'section'  => 'intro',
+		'label'    => 'Description',
 	) );
 
 	/*
 	 * Background image customizer
 	 */
-	$wp_customize->add_setting( 'massively_wp_background' );
+	$wp_customize->add_setting( 'massively_wp_background', array(
+		'sanitize_callback' => 'wp_filter_nohtml_kses'
+	) );
 	$wp_customize->add_control( new WP_Customize_image_control( $wp_customize, 'massively_wp_background', array(
 		'label'    => 'Upload Background Image',
 		'section'  => 'background_image',

@@ -111,6 +111,14 @@ add_action( 'comment_form_top', function() {
 } );
 
 /**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style();
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
