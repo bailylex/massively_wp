@@ -1,7 +1,7 @@
 === Massively WP ===
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Contributors: Alexander Fedorov
+Tags: custom-background, custom-social-menu, custom-menu, featured-images, threaded-comments, translation-ready, RTL-language-support, intro
 
 Requires at least: 4.5
 Tested up to: 4.8
@@ -9,11 +9,9 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Massively WP.
-
 == Description ==
 
-Description
+Massively WP has nice homepage intro scrolling effect, accompanied with a  fullscreen background image. It suits perfectly for any kind of minimalistic project.
 
 == Installation ==
 
@@ -29,7 +27,7 @@ Massively WP includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - June 13 2018 =
 * Initial release
 
 == Credits ==
