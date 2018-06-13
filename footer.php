@@ -11,22 +11,22 @@
 
 ?>
 
-	</div><!-- #main -->
+		</div><!-- #main -->
 
-	<!-- Footer plugin -->
+		<!-- Footer plugin -->
 
-	<!-- Copyright -->
-	<div id="copyright">
-		<ul>
-			<li>&copy; <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a></li>
-			<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			<li>WordPress: <a href="">Alex Fedorov</a></li>
-		</ul>
-	</div>
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a></li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				<li>WordPress: <a href="">Alex Fedorov</a></li>
+			</ul>
+		</div>
 
-</div><!-- #wrapper -->
+	</div><!-- #wrapper -->
 
-<?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>
