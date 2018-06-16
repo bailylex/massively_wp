@@ -29,7 +29,7 @@ function massively_wp_customize_register( $wp_customize ) {
 	 * Remove sections and settings
 	*/
 	$wp_customize->remove_section( 'header_image' );
-	$wp_customize->remove_control( 'background_image' );
+	$wp_customize->remove_setting( 'background_image' );
 
 	/**
 	 * Intro section customizer
